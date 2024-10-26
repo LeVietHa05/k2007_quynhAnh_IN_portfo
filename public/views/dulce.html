@@ -11,17 +11,17 @@
 <body>
 
     <nav class="d-f justify-c align-c c-2 h6-2nd t-t-u">
-        <ul class="d-f justify-c align-c">
-            <li class="p8 px16 "><a href="/">home</a></li>
-            <li class="p8 px16 active"><a href="/dulce">dulce presente</a></li>
-            <li class="p8 px16"><a href="/trace">trace the threads</a></li>
-            <li class="p8 px16"><a href="/insideout"><img src="images/things/mail.png" alt=""></a></li>
+        <ul class="d-f justify-c align-c g-16">
+            <li class=""><a href="/" class="p8 px16 ">home</a></li>
+            <li class=" active"><a href="/dulce" class="p8 px16">dulce presente</a></li>
+            <li class=""><a href="/trace" class="p8 px16">trace the threads</a></li>
+            <li class=""><a href="/insideout" class="p8 px16"><img src="images/things/mail.png" alt=""></a></li>
         </ul>
     </nav>
 
 
 
-    <main class="mt-76 pb-80">
+    <main class="mt-76 pb-80 g-20 col-center" id="dulce">
 
     </main>
 
@@ -57,10 +57,10 @@
         `
         ]
         let normalLiHtml = [
-            `<a href="/">home</a>`,
-            `<a href="/dulce">dulce presente</a>`,
-            `<a href="/trace">trace the threads</a>`,
-            `<a href="/insideout"><img src="images/things/mail.png" alt=""></a>`
+            `<a href="/" class="p8 px16 ">home</a>`,
+            `<a href="/dulce" class="p8 px16 ">dulce presente</a>`,
+            `<a href="/trace" class="p8 px16 ">trace the threads</a>`,
+            `<a href="/insideout" class="p8 px16 "><img src="images/things/mail.png" alt=""></a>`
         ]
         //active nav
         let lis = document.querySelectorAll('nav li');
@@ -85,6 +85,37 @@
                 li.classList.add('active')
                 activeNav()
             })
+        })
+    </script>
+
+    <script>
+        let main = document.querySelector('main');
+        let imgs = [
+            'images/dulce/1.png',
+            'images/dulce/2.png',
+            'images/dulce/3.png',
+            'images/dulce/4.png',
+            'images/dulce/5.png',
+            'images/dulce/6.png',
+            'images/dulce/7.png',
+            'images/dulce/8.png',
+            'images/dulce/9.png',
+            'images/dulce/10.png',
+            'images/dulce/11.png',
+            'images/dulce/12.png',
+            'images/dulce/13.png',
+            'images/dulce/14.png',
+            'images/dulce/15.png',
+            'images/dulce/16.png',
+            'images/dulce/17.png',
+        ]
+        imgs.forEach(img => {
+            let div = document.createElement('div');
+            div.classList.add
+            let imgEl = document.createElement('img');
+            imgEl.src = img;
+            div.appendChild(imgEl);
+            main.appendChild(div);
         })
     </script>
 </body>

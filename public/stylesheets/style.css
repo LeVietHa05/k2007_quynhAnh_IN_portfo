@@ -144,6 +144,9 @@ li {
 .g-16{
   gap: 16px;
 }
+.g-20 {
+  gap: 20px;
+}
 .g-100 {
   gap: 100px;
 }
@@ -174,6 +177,12 @@ nav {
   background-image: url("../images/nav_bg.png");
 }
 
+nav li.active {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
 main {
   background-image: url("../images/bg.png");
   background-color: var(--milk);
@@ -201,4 +210,16 @@ footer {
 }
 .bg-linear-6 {
   background: linear-gradient(90deg, #2C4E57 0%, #3B6976 100%);
+}
+
+#dulce > div {
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #FCF6E8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+
+#dulce > div > img {
+  width: 100%;
+  height: auto;
 }
