@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>CUIMIMI</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="d-f justify-c align-c c-2 h6-2nd t-t-u">
+        <ul class="d-f justify-c align-c">
+            <li class="p8 px16 "><a href="/">home</a></li>
+            <li class="p8 px16 "><a href="/dulce">dulce presente</a></li>
+            <li class="p8 px16 active"><a href="/trace">trace the threads</a></li>
+            <li class="p8 px16"><a href="/insideout"><img src="images/things/mail.png" alt=""></a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <main class="mt-76 pb-80">  
+
+    </main>
+
+
+
+
+    <footer class="d-f justify-sa align-c c-8 h6-2nd bg-linear-3">
+        <div>By Quynh-Anh Dao Thi - Margaret Dao</div>
+        <div class="d-f justify-sa align-c g-16"><img src="images/things/mail-2.png" alt="">
+            <p>quynhanhdao517@gmail.com</p>
+        </div>
+    </footer>
+    
+    <script>
+        let activeLiHtml = [
+            `
+          <img src="/images/things/quote-left.png" alt="">
+          home
+          <img src="/images/things/quote-right.png" alt="">
+        `,
+            `
+          <img src="/images/things/quote-left.png" alt="">
+          dulce presente
+          <img src="/images/things/quote-right.png" alt="">
+        `,
+            `
+          <img src="/images/things/quote-left.png" alt="">
+          trace the threads
+          <img src="/images/things/quote-right.png" alt="">
+        `,
+            `
+          <img src="/images/things/quote-left.png" alt="">
+          <img src="/images/things/mail.png" alt="">
+          <img src="/images/things/quote-right.png" alt="">
+        `
+        ]
+        let normalLiHtml = [
+            `<a href="/">home</a>`,
+            `<a href="/dulce">dulce presente</a>`,
+            `<a href="/trace">trace the threads</a>`,
+            `<a href="/insideout"><img src="images/things/mail.png" alt=""></a>`
+        ]
+        //active nav
+        let lis = document.querySelectorAll('nav li');
+        activeNav();
+        function activeNav() {
+            lis.forEach((li, index) => {
+                if (li.classList.contains('active')) {
+                    li.innerHTML = activeLiHtml[index]
+                } else {
+                    li.innerHTML = normalLiHtml[index]
+                }
+            })
+        }
+
+
+        //add active class when click
+        lis.forEach(li => {
+            li.addEventListener('click', () => {
+                lis.forEach(li => {
+                    li.classList.remove('active')
+                })
+                li.classList.add('active')
+                activeNav()
+            })
+        })
+    </script>
+    </body>
+    
+    </html>
