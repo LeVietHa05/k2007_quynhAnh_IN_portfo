@@ -104,6 +104,9 @@ li {
   text-transform: lowercase;
 }
 
+.d-i-b {
+  display: inline-block;
+}
 .d-f {
   display: flex;
 }
@@ -141,7 +144,7 @@ li {
   flex-direction: row;
 }
 
-.g-16{
+.g-16 {
   gap: 16px;
 }
 .g-20 {
@@ -156,11 +159,17 @@ li {
 .p8 {
   padding: 8px;
 }
+.p10 {
+  padding: 10px;
+}
+.p20 {
+  padding: 20px;
+}
 .px16 {
   padding-left: 16px;
   padding-right: 16px;
 }
-.pb-80{
+.pb-80 {
   padding-bottom: 80px;
 }
 .mt-76 {
@@ -200,26 +209,77 @@ footer {
   background: linear-gradient(90deg, var(--pink) 0%, var(--light-green) 100%);
 }
 .bg-linear-3 {
-  background: linear-gradient(90deg, #6F2421 0%, #B25546 100%);
+  background: linear-gradient(90deg, #6f2421 0%, #b25546 100%);
 }
 .bg-linear-4 {
-  background: linear-gradient(90deg, #DD9A89 0%, #96483C 100%);
+  background: linear-gradient(90deg, #dd9a89 0%, #96483c 100%);
 }
 .bg-linear-5 {
-  background: linear-gradient(90deg, #5C7F79 0%, #38636E 100%);
+  background: linear-gradient(90deg, #5c7f79 0%, #38636e 100%);
 }
 .bg-linear-6 {
-  background: linear-gradient(90deg, #2C4E57 0%, #3B6976 100%);
+  background: linear-gradient(90deg, #2c4e57 0%, #3b6976 100%);
 }
 
 #dulce > div {
   max-width: 1200px;
   padding: 20px;
-  background-color: #FCF6E8;
+  background-color: #fcf6e8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} 
+}
 
 #dulce > div > img {
   width: 100%;
   height: auto;
+}
+
+#insideout {
+  background: url("../images/insideout/bg 1.png"), var(--milk);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+#insideout #main-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin: auto;
+  max-width: 1368px;
+  gap: 10px;
+}
+
+.poem-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fcf6e8;
+  cursor: pointer;
+}
+.poem-container img {
+  width: 100%;
+}
+.gradient-text {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#poem-preview {
+}
+
+.poem-prev,
+.poem-next {
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
 }

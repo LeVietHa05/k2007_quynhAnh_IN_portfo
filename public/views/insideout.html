@@ -22,8 +22,27 @@
 
 
 
-    <main class="mt-76 pb-80">
+    <main class="mt-76 pb-80" id="insideout">
+        <section id="welcome" class="row-center">
+            <div class="h1-2nd">INSIDE - OUT</div>
+            <div>
+                <img src="images/things/ghost.png" alt="">
+            </div>
+        </section>
 
+        <section id="main-body">
+
+        </section>
+
+        <section id="preview">
+            <div class="poem-prev">
+                <img src="images/things/arrow-left.png" alt="">
+            </div>
+            <div id="poem-preview"></div>
+            <div class="poem-next">
+                <img src="images/things/arrow-right.png" alt="">
+            </div>
+        </section>
     </main>
 
 
@@ -35,6 +54,203 @@
             <p>quynhanhdao517@gmail.com</p>
         </div>
     </footer>
+
+    <script>
+        let poems = {
+            1: {
+                title: "Thời gian là gì?",
+                thumbnail: "images/insideout/poem-1-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-1-cover-big.png",
+                    "images/insideout/poem-1-1.png",
+                    "images/insideout/poem-1-2.png",
+                    "images/insideout/poem-1-3.png",
+                    "images/insideout/poem-1-4.png",
+                    "images/insideout/poem-1-5.png",
+                    "images/insideout/poem-1-6.png",
+                ]
+            },
+            2: {
+                title: "Say mơ",
+                thumbnail: "images/insideout/poem-2-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-2-cover-big.png",
+                    "images/insideout/poem-2-1.png",
+                    "images/insideout/poem-2-2.png",
+                    "images/insideout/poem-2-3.png",
+                    "images/insideout/poem-2-4.png",
+                    "images/insideout/poem-2-5.png",
+                ]
+            },
+            3: {
+                title: "Bé ngủ đi thôi",
+                thumbnail: "images/insideout/poem-3-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-3-cover-big.png",
+                    "images/insideout/poem-3-1.png",
+                    "images/insideout/poem-3-2.png",
+                    "images/insideout/poem-3-3.png",
+                    "images/insideout/poem-3-4.png",
+                ]
+            },
+            4: {
+                title: "Lặng yên nhìn nắng múa",
+                thumbnail: "images/insideout/poem-4-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-4-cover-big.png",
+                    "images/insideout/poem-4-1.png",
+                    "images/insideout/poem-4-2.png",
+                    "images/insideout/poem-4-3.png",
+                ]
+            },
+            5: {
+                title: "Lỡ ăn no",
+                thumbnail: "images/insideout/poem-5-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-5-cover-big.png",
+                    "images/insideout/poem-5-1.png",
+                    "images/insideout/poem-5-2.png",
+                    "images/insideout/poem-5-3.png",
+                ]
+            },
+            6: {
+                title: "Ma kết - Yagi",
+                thumbnail: "images/insideout/poem-6-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-6-cover-big.png",
+                    "images/insideout/poem-6-1.png",
+                    "images/insideout/poem-6-2.png",
+                    "images/insideout/poem-6-3.png",
+                    "images/insideout/poem-6-4.png",
+                ]
+            },
+            7: {
+                title: "Giấc hè",
+                thumbnail: "images/insideout/poem-7-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-7-cover-big.png",
+                    "images/insideout/poem-7-1.png",
+                    "images/insideout/poem-7-2.png",
+                ]
+            },
+            8: {
+                title: "Đông về quê ngoại",
+                thumbnail: "images/insideout/poem-8-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-8-cover-big.png",
+                    "images/insideout/poem-8-1.png",
+                    "images/insideout/poem-8-2.png",
+                    "images/insideout/poem-8-3.png",
+                ]
+            },
+            9: {
+                title: "Điện thoại (a diary entry)",
+                thumbnail: "images/insideout/poem-9-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-9-cover-big.png",
+                    "images/insideout/poem-9-1.png",
+                    "images/insideout/poem-9-2.png",
+                    "images/insideout/poem-9-3.png",
+                    "images/insideout/poem-9-4.png",
+                    "images/insideout/poem-9-5.png",
+                    "images/insideout/poem-9-6.png",
+                    "images/insideout/poem-9-7.png",
+                ]
+            },
+            10: {
+                title: "Bát cháo buổi sớm",
+                thumbnail: "images/insideout/poem-10-cover-small.png",
+                imgs: [
+                    "images/insideout/poem-10-cover-big.png",
+                    "images/insideout/poem-10-1.png",
+                    "images/insideout/poem-10-2.png",
+                ]
+            }
+        }
+
+        let main_body = document.getElementById('main-body');
+        for (let poem in poems) {
+            let div = document.createElement('div');
+            div.classList.add('poem-container', 'p20');
+            div.innerHTML = `
+            <div>
+                    <img src="${poems[poem].thumbnail}" alt="${poems[poem].title}">
+                </div>
+                <div class="poem-length h6-2nd p16 ">
+                    <span class="gradient-text bg-linear-4 d-i-b">${poems[poem].imgs.length} images</span>
+            </div>
+            `
+            main_body.appendChild(div);
+        }
+
+        let currentPoem = 0;
+        let currentPoemImg = 0;
+        let preview = document.getElementById('preview');
+        let poemPreview = document.getElementById('poem-preview');
+        let poemContainers = document.querySelectorAll('.poem-container');
+        let poemPrev = document.querySelector('.poem-prev');
+        let poemNext = document.querySelector('.poem-next');
+
+        poemContainers.forEach((poemContainer, index) => {
+            poemContainer.addEventListener('click', () => {
+                preview.style.display = 'flex';
+                // poemPreview.classList.add('row-center');
+                currentPoemImg = 0;
+                currentPoem = index + 1;
+                console.log(currentPoem);
+                poemPrev.style.display = 'none';
+                poemPrev.style.opacity = 0;
+                poemNext.style.display = 'block';
+                poemNext.style.opacity = 1;
+                poemPreview.innerHTML = `
+                <div> <img src="${poems[currentPoem].imgs[currentPoemImg]}" alt="${poems[currentPoem].title}"> </div>
+                `
+            })
+        })
+        poemPrev.addEventListener('click', () => {
+            currentPoemImg = currentPoemImg === 0 ? poems[currentPoem].imgs.length - 1 : currentPoemImg - 1;
+
+            if (currentPoemImg === 0) {
+                poemPrev.style.opacity = 0;
+                poemPrev.style.display = 'none';
+                poemNext.style.display = 'block';
+                poemNext.style.opacity = 1;
+            } else {
+                poemNext.style.display = 'block';
+                poemNext.style.opacity = 1;
+                poemPrev.style.opacity = 1;
+                poemPrev.style.display = 'block';
+            }
+            poemPreview.innerHTML = `
+                <div> <img src="${poems[currentPoem].imgs[currentPoemImg]}" alt="${poems[currentPoem].title}"> </div>
+                `
+        })
+        poemNext.addEventListener('click', () => {
+            currentPoemImg = currentPoemImg === poems[currentPoem].imgs.length - 1 ? 0 : currentPoemImg + 1;
+
+            if (currentPoemImg === poems[currentPoem].imgs.length - 1) {
+                poemPrev.style.display = 'block';
+                poemPrev.style.opacity = 1;
+                poemNext.style.opacity = 0;
+                poemNext.style.display = 'none';
+            } else {
+                poemPrev.style.display = 'block';
+                poemPrev.style.opacity = 1;
+                poemNext.style.display = 'block';
+                poemNext.style.opacity = 1;
+            }
+            poemPreview.innerHTML = `
+                <div> <img src="${poems[currentPoem].imgs[currentPoemImg]}" alt="${poems[currentPoem].title}"> </div>
+                `
+
+        })
+
+        preview.addEventListener('click', (e) => {
+            if (e.target === preview)
+                preview.style.display = 'none';
+        })
+
+    </script>
 
     <script>
         let activeLiHtml = [
