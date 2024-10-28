@@ -74,10 +74,20 @@
         let setOfPos = [cub, battrang, vanphuc, thachxa, vanphuc2, lemat, nhattan]
 
         let currentPos = 0;
-        if (localStorage.getItem('currentPos') > 0) {
-            currentPos = localStorage.getItem('currentPos')
-            cub.style.top = setOfPos[currentPos].style.top
-            cub.style.left = setOfPos[currentPos].style.left
+        if (+localStorage.getItem('currentPos') > 0) {
+            currentPos = +localStorage.getItem('currentPos')
+            let clickedElement = setOfPos[currentPos]
+            let parrentElement = clickedElement.offsetParent
+
+            clickedElement = clickedElement.getBoundingClientRect()
+            parrentElement = parrentElement.getBoundingClientRect()
+
+            let cubTop = clickedElement.top - parrentElement.top
+            let cubLeft = clickedElement.left - parrentElement.left
+
+            cub.style.top = `${cubTop - 10}px`
+            cub.style.left = `${cubLeft - 10}px`
+
         }
         function goto(url, newpos) {
 
