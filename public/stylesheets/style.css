@@ -337,3 +337,9 @@ footer {
   top: 602px;
   left: 132px;
 }
+.trace-content {
+  background: url("../images/bg.png"), var(--milk);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
