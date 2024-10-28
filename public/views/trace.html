@@ -22,8 +22,34 @@
 
 
 
-    <main class="mt-76 pb-80">
+    <main class="mt-76 pb-80" id="trace">
+        <section id="welcome" class="row-center">
+            <div class="h1-2nd">TRACE THE THREADS</div>
+        </section>
 
+        <section id="main-body">
+            <div id="cub" class="pos-abs">
+                <img src="images/trace/cub.png" alt="">
+            </div>
+            <div id="battrang" class="pos-abs" onclick="goto('/battrang', 1)">
+                <img src="images/trace/battrang.png" alt="">
+            </div>
+            <div id="vanphuc" class="pos-abs" onclick="goto('/vanphuc', 2)">
+                <img src="images/trace/vanphuc.png" alt="">
+            </div>
+            <div id="thachxa" class="pos-abs" onclick="goto('/thachxa', 3)">
+                <img src="images/trace/thachxa.png" alt="">
+            </div>
+            <div id="vanphuc2" class="pos-abs" onclick="goto('/vanphuc2', 4)">
+                <img src="images/trace/vanphuc2.png" alt="">
+            </div>
+            <div id="lemat" class="pos-abs" onclick="goto('/lemat', 5)">
+                <img src="images/trace/lemat.png" alt="">
+            </div>
+            <div id="nhattan" class="pos-abs" onclick="goto('/nhattan', 6)">
+                <img src="images/trace/nhattan.png" alt="">
+            </div>
+        </section>
     </main>
 
 
@@ -35,6 +61,45 @@
             <p>quynhanhdao517@gmail.com</p>
         </div>
     </footer>
+
+    <script>
+        let cub = document.getElementById('cub')
+        let battrang = document.getElementById('battrang')
+        let vanphuc = document.getElementById('vanphuc')
+        let thachxa = document.getElementById('thachxa')
+        let vanphuc2 = document.getElementById('vanphuc2')
+        let lemat = document.getElementById('lemat')
+        let nhattan = document.getElementById('nhattan')
+
+        let setOfPos = [cub, battrang, vanphuc, thachxa, vanphuc2, lemat, nhattan]
+
+        let currentPos = 0;
+        if (localStorage.getItem('currentPos') > 0) {
+            currentPos = localStorage.getItem('currentPos')
+            cub.style.top = setOfPos[currentPos].style.top
+            cub.style.left = setOfPos[currentPos].style.left
+        }
+        function goto(url, newpos) {
+
+            localStorage.setItem('currentPos', newpos)
+
+            let clickedElement = setOfPos[newpos]
+            let parrentElement = clickedElement.offsetParent
+
+            clickedElement = clickedElement.getBoundingClientRect()
+            parrentElement = parrentElement.getBoundingClientRect()
+
+            let cubTop = clickedElement.top - parrentElement.top
+            let cubLeft = clickedElement.left - parrentElement.left
+
+            cub.style.top = `${cubTop - 10}px`
+            cub.style.left = `${cubLeft - 10}px`
+
+            setTimeout(() => {
+                window.location.href = url
+            }, 4000)
+        }
+    </script>
 
     <script>
         let activeLiHtml = [

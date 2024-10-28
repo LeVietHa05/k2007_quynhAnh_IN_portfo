@@ -176,6 +176,10 @@ li {
   margin-top: 76px;
 }
 
+.pos-abs {
+  position: absolute;
+}
+
 nav {
   position: fixed;
   left: 0;
@@ -282,4 +286,54 @@ footer {
 .poem-next {
   cursor: pointer;
   transition: opacity 1s ease-in-out;
+}
+
+#trace #main-body {
+  position: relative;
+  margin: auto;
+  width: 1442px;
+  aspect-ratio: 1442/966;
+  background-image: url("../images/trace/main-bg.png");
+}
+
+#trace #main-body img {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+#trace #main-body img:hover {
+  rotate: 360deg;
+  scale: 1.2;
+}
+
+#cub {
+  width: 244px;
+  top: 113px;
+  left: 85px;
+  z-index: 2;
+  transition: top 3s, left 3s;
+}
+#battrang {
+  top: 143px;
+  left: 530px;
+}
+#vanphuc {
+  top: 60px;
+  left: 912px;
+}
+#thachxa {
+  top: 324px;
+  left: 1171px;
+}
+#vanphuc2 {
+  top: 563px;
+  left: 904px;
+}
+#lemat {
+  top: 576px;
+  left: 530px;
+}
+#nhattan {
+  top: 602px;
+  left: 132px;
 }
