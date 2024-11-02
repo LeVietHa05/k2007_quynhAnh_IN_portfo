@@ -93,6 +93,9 @@ li {
 .c-8 {
   color: var(--milk);
 }
+.bg-milk {
+  background-color: var(--milk);
+}
 
 .t-t-u {
   text-transform: uppercase;
@@ -280,6 +283,13 @@ footer {
 }
 
 #poem-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .poem-prev,
@@ -342,4 +352,8 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: lighten;
+}
+
+.max-width-60p {
+  max-width: 60%;
 }
