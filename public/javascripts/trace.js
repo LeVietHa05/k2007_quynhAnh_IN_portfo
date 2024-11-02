@@ -17,7 +17,7 @@ poemContainers.forEach((poemContainer, index) => {
         poemNext.style.opacity = 1;
         poemPreview.innerHTML =
             `
-            <div class='p20 bg-milk col-center max-width-60p'>
+            <div class='p20 bg-milk col-center justify-start max-width-60p' style='overflow-y:auto ;max-height: 90%;margin: 10px 0;'>
                 <img style='width:100%' src="${blocks[currentBlock].imgs[currentBlockImage]}" alt="">
                 <p class='h6-2nd'>${blocks[currentBlock].content}</p>
             </div>
@@ -26,7 +26,8 @@ poemContainers.forEach((poemContainer, index) => {
 })
 poemPrev.addEventListener('click', () => {
     console.log('clicked prev');
-    if (currentBlock == 0 && currentBlockImage == 0) {
+    if (currentBlock == 1 && currentBlockImage == 0) {
+        preview.style.display = 'none';
         return;
     }
     if (currentBlockImage == 0) {
@@ -37,7 +38,7 @@ poemPrev.addEventListener('click', () => {
     }
     poemPreview.innerHTML =
         `
-        <div class='p20 bg-milk col-center max-width-60p'>
+        <div class='p20 bg-milk col-center justify-start max-width-60p'  style='overflow-y:auto ;max-height: 90%;margin: 10px 0;'>
             <img style='width:100%' src="${blocks[currentBlock].imgs[currentBlockImage]}" alt="">
             <p class='h6-2nd '>${blocks[currentBlock].content}</p>
         </div>
@@ -45,7 +46,8 @@ poemPrev.addEventListener('click', () => {
 })
 poemNext.addEventListener('click', () => {
     console.log('clicked next');
-    if (currentBlock == blocks.length - 1 && currentBlockImage == blocks[currentBlock].imgs.length - 1) {
+    if (currentBlock == Object.keys(blocks).length && currentBlockImage == blocks[currentBlock].imgs.length - 1) {
+        preview.style.display = 'none';
         return;
     }
     if (currentBlockImage == blocks[currentBlock].imgs.length - 1) {
@@ -56,7 +58,7 @@ poemNext.addEventListener('click', () => {
     }
     poemPreview.innerHTML =
         `
-        <div class='p20 bg-milk col-center max-width-60p'>
+        <div class='p20 bg-milk col-center justify-start max-width-60p'  style='overflow-y:auto ;max-height: 90%; margin: 10px 0;'>
             <img style='width:100%' src="${blocks[currentBlock].imgs[currentBlockImage]}" alt="">
             <p class='h6-2nd '>${blocks[currentBlock].content}</p>
         </div>
