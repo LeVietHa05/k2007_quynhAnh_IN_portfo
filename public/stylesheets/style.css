@@ -96,6 +96,9 @@ li {
 .bg-milk {
   background-color: var(--milk);
 }
+.bg-light-pink {
+  background-color: var(--light-pink);
+}
 
 .t-t-u {
   text-transform: uppercase;
@@ -359,4 +362,134 @@ footer {
 
 .max-width-60p {
   max-width: 60%;
+}
+
+.gallery-container {
+  position: relative;
+  width: 70%;
+}
+
+.main-img-container {
+  width: 100%;
+  height: 800px;
+  overflow: hidden; /* Hide overflow to maintain container size */
+  position: relative;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.main-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: auto;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+}
+.prev:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+}
+.preview-container {
+  display: flex;
+  justify-content: start;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 10px;
+  /* width: 100%; */
+}
+
+.text-content {
+  overflow-y: auto;
+  height: 100%;
+  width: 30%;
+}
+.preview {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.preview:hover {
+  /* transform: scale(1.1); */
+  opacity: 1;
+}
+
+.main-content {
+  height: 1000px;
+  margin-bottom: 20px;
+}
+.img-con {
+  position: relative;
+  height: 800px;
+}
+@media screen and (max-width: 1368px) {
+  .main-content {
+    height: 300px;
+  }
+  .gallery-container {
+    width: 50%;
+  }
+  .main-img-container {
+    height: 250px;
+  }
+  .img-con {
+    height: 250px;
+  }
+  .preview-container {
+    margin-top: 5px;
+  }
+  .preview {
+    width: 50px;
+    height: 50px;
+  }
+  .prev,
+  .next {
+    width: 50px;
+  }
+  .prev img,
+  .next img {
+    width: 100%;
+  }
+  .text-content{
+    width: 50%;
+  }
 }

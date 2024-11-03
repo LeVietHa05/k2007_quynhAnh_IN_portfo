@@ -21,33 +21,32 @@
 
 
     <main id="lemat-content" class="trace-content mt-76 pb-80">
-        <div style="max-width: 1368px; margin: auto;">
+        <div style="max-width: 70%; margin: auto;">
             <section class="trace-header c-4 h3-2nd">
                 SLITHERING
             </section>
-            <section class="gallery poem-container p20">
-                <div>
-                    <img src="images/lemat/cover.png" alt="lemat cover">
-                </div>
-                <div class="poem-length h6-2nd p16 ">
-                    <span class="gradient-text bg-linear-4 d-i-b">29 images</span>
-                </div>
-            </section>
-            <section style="white-space: pre;" class="h6-2nd">
+            <section class="row-center bg-milk main-content" >
+                <section class="gallery-container ">
+                    <div class="img-con">
+                        <div class="main-img-container">
+                            <img id="main-image" src="images/lemat/29.png" alt="">
+                        </div>
+                        <div class="prev" onclick="changeSlide(-1)">
+                            <img src="images/things/arrow-left.png" alt="">
+                        </div>
+                        <div class="next" onclick="changeSlide(1)">
+                            <img src="images/things/arrow-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="preview-container">
+                        <!-- to be handle using js -->
+                    </div>
+                </section>
+                <section class="text-content p20 h6-2nd" > </section>
             </section>
         </div>
 
         <div class="t-t-c col-center"><a href="/trace" class="h5-2nd bg-linear-1 gradient-text">go back</a></div>
-
-        <section id="preview">
-            <div class="poem-prev">
-                <img src="images/things/arrow-left.png" alt="">
-            </div>
-            <div id="poem-preview"></div>
-            <div class="poem-next">
-                <img src="images/things/arrow-right.png" alt="">
-            </div>
-        </section>
     </main>
 
     <footer class="d-f justify-sa align-c c-8 h6-2nd bg-linear-3">
@@ -57,78 +56,47 @@
         </div>
     </footer>
     <script>
-        let blocks = {
-            1: {
-                imgs:[
-                    'images/lemat/29.png',
-                ],
-                content: "Despite having visited Lệ Mật Snake Village multiple times during my childhood, I somehow managed to avoid encountering any snakes there. While I secretly yearned for the experience, my younger self found the idea quite nightmarish. When Trường, a close friend of mine, revealed that he lived a stone’s throw away from Lệ Mật, I knew I would finally meet some serpentine fellas."
-            },
-            2: {
-                imgs: [
-                    'images/lemat/7.png',
-                ],
-                content: 'Having a friend as your guide means exploring the hidden gems. From the outside, Lệ Mật village might look like any other bustling urban area, but a local can show you the centuries-old practice of snake farming slinking beneath the city’s veneer. Truong told me that. Unlike the more obvious snake restaurants and farms, the most authentic ones are tucked away in quiet alleys. And on a sun-drenched afternoon, we set off to visit one such place.'
-            },
-            3: {
-                imgs: [
-                    'images/lemat/17.png',
-                ],
-                content: `Passing through the picturesque shrine and temple of Lệ Mật, Trường told me about the legend behind Lệ Mật's snake farming heritage from the 11th century*.There was a man named Hoàng who lived by snake- catching.One day, the princess was enjoying her boat ride when Giảo Long, a monstrous serpent- like creature, lunged from the depths, dragging her underwater.Hoàng courageously vanquished the water beast to salvage the princess, returning her body to the king.Even though he was offered lavish rewards in return, Hoàng only wished for his village to settle new land to the east of Thang Long Citadel, which was granted.That was the inception of Lệ Mật Village.The villagers then took up snake - catching to pay tribute to their hero.`
-            },
-            4: {
-                imgs: [
-                    'images/lemat/27.png',
-                ],
-                content: `Snake-catching and, later, snake farming once thrived in Lệ Mật, providing a significant source of income for many families. The combination of high demand, high profit and the growing popularity of thrill-seeking tourism led to a boom in snake-related businesses. Snake products, from meat to leather goods, were highly sought after. However, the industry faced a decline due to increasing moral concerns and wildlife protection efforts. The pandemic further exacerbated this downturn, with many snake farms and restaurants struggling to survive the prolonged lockdowns.
-                <br>
-                I was thinking we were lost when Trường told me we had arrived at one of the most renowned snake restaurants in Lệ Mật, oddly situated in a secluded neighborhood. Its entrance had an otherworldly feel, shrouded by verdant foliage. Inside was a menagerie of exotic animals with cages lining the porch, housing birds, snakes, and other reptiles, filling the air with a pungent odor. Our presence must have ruffled some feathers, as the winged creatures started to screech in unison. The snakes remained eerily calm, unfazed even by our blinding camera flashes. Mr Lập, the owner, seemed unperturbed by this hair-raising commotion. He led us to their showroom of various products from snakes -  from bags, wallets, and belts to boots, shoes, and watch straps - all with a hefty price tag. But it was the bottles of cobras steeped in herbs and alcohol that fascinated us the most.`
-            },
-            4: {
-                imgs: [
-                    'images/lemat/2.png',
-                    'images/lemat/13.png',
-                    'images/lemat/3.png',
-                    'images/lemat/5.png',
-                    'images/lemat/8.png',
-                    'images/lemat/9.png',
-                    'images/lemat/10.png',
-                    'images/lemat/11.png',
-                    'images/lemat/12.png',
-                ],
-                content: `As the staff started pacing along the hallway and checking the cages, unease took hold of me. The thought of the animals I had seen being prepared for consumption filled me with dread and…guilt and an overwhelming urge to leave.  And when a senior staff read the day’s orders to Mr. Lap  “Five rat snakes, four cobras,...”, we slunk off. 
-                <br>
-                On the verge of canceling the trip from that unsettling experience,  we stumbled upon a small snake garden mainly catering to homestay guests. The owner invited us to join him and his guests for a meal of snake egg omelet, stir-fried snake, and wine tasting. His collection of snake and reptile wines was awe-inspiring, with jars of exotic concoctions lining the shelves like specimens collected by a mad scientist. While the owner was preparing the meal, his mother showed us where they raised the snakes. Curiously, they kept the snakes inside bonsai pots covered with glass lids and ceramic urns around the house, which was rather disturbing. While I wanted to stay longer to talk with the friendly owners and guests, the familiar aroma of freshly cooked omelet made my stomach churn, and I knew I had to step away.`
-            },
-            5: {
-                imgs: [
-                    'images/lemat/18.png',
-                    'images/lemat/19.png',
-                    'images/lemat/20.png',
-                    'images/lemat/8.png',
-                    'images/lemat/21.png',
-                    'images/lemat/22.png',
-                ],
-                content: `We went on to explore Lệ Mật's picturesque historical sites, but moral questions were swirling in my mind. While learning about their snake farming practices was enlightening, I couldn't shake the feeling that younger generations might view this legacy differently. Although concerns about overexploitation and illegal harvesting have largely been addressed**, the ethical dilemma of valuing a culture built on animal sacrifice still resonates with young people like Trường and me. As Lệ Mật became a city-level tourist attraction***, celebrating its unique snake farming and culinary traditions, the tension between preserving culture and respecting animal welfare became increasingly apparent. In the meantime, the attention is on developing tourism and promoting all-things-snakes as the village's quintessence.`
-            }, 
-            6:{
-                imgs: [
-                    'images/lemat/25.png',
-                    'images/lemat/28.png',
-                    'images/lemat/26.png',
-                ],
-                content: `As the sun dipped below the horizon, Lệ Mật awakened its urban spirit. Yet, in quiet alleys, hordes of wild animals were confined to cramped, claustrophobic cages, awaiting painful deaths for the amusement of “adventurous” souls. A legacy that felt increasingly unsettling persisted.`
-            },
-            7: {
-                imgs: [
-                    'images/lemat/1.png',
-                ],
-                content: 
-                `* https://www.bienphong.com.vn/truyen-thuyet-lang-xa-post16950.html <br>
+        let blocks = [
+            "Despite having visited Lệ Mật Snake Village multiple times during my childhood, I somehow managed to avoid encountering any snakes there. While I secretly yearned for the experience, my younger self found the idea quite nightmarish. When Trường, a close friend of mine, revealed that he lived a stone’s throw away from Lệ Mật, I knew I would finally meet some serpentine fellas.",
+            'Having a friend as your guide means exploring the hidden gems. From the outside, Lệ Mật village might look like any other bustling urban area, but a local can show you the centuries-old practice of snake farming slinking beneath the city’s veneer. Truong told me that. Unlike the more obvious snake restaurants and farms, the most authentic ones are tucked away in quiet alleys. And on a sun-drenched afternoon, we set off to visit one such place.',
+            `Passing through the picturesque shrine and temple of Lệ Mật, Trường told me about the legend behind Lệ Mật's snake farming heritage from the 11th century*.There was a man named Hoàng who lived by snake- catching.One day, the princess was enjoying her boat ride when Giảo Long, a monstrous serpent- like creature, lunged from the depths, dragging her underwater.Hoàng courageously vanquished the water beast to salvage the princess, returning her body to the king.Even though he was offered lavish rewards in return, Hoàng only wished for his village to settle new land to the east of Thang Long Citadel, which was granted.That was the inception of Lệ Mật Village.The villagers then took up snake - catching to pay tribute to their hero.`,
+            `Snake-catching and, later, snake farming once thrived in Lệ Mật, providing a significant source of income for many families. The combination of high demand, high profit and the growing popularity of thrill-seeking tourism led to a boom in snake-related businesses. Snake products, from meat to leather goods, were highly sought after. However, the industry faced a decline due to increasing moral concerns and wildlife protection efforts. The pandemic further exacerbated this downturn, with many snake farms and restaurants struggling to survive the prolonged lockdowns.`,
+            `I was thinking we were lost when Trường told me we had arrived at one of the most renowned snake restaurants in Lệ Mật, oddly situated in a secluded neighborhood. Its entrance had an otherworldly feel, shrouded by verdant foliage. Inside was a menagerie of exotic animals with cages lining the porch, housing birds, snakes, and other reptiles, filling the air with a pungent odor. Our presence must have ruffled some feathers, as the winged creatures started to screech in unison. The snakes remained eerily calm, unfazed even by our blinding camera flashes. Mr Lập, the owner, seemed unperturbed by this hair-raising commotion. He led us to their showroom of various products from snakes -  from bags, wallets, and belts to boots, shoes, and watch straps - all with a hefty price tag. But it was the bottles of cobras steeped in herbs and alcohol that fascinated us the most.`,
+            `As the staff started pacing along the hallway and checking the cages, unease took hold of me. The thought of the animals I had seen being prepared for consumption filled me with dread and…guilt and an overwhelming urge to leave.  And when a senior staff read the day’s orders to Mr. Lap  “Five rat snakes, four cobras,...”, we slunk off. `,
+            `On the verge of canceling the trip from that unsettling experience,  we stumbled upon a small snake garden mainly catering to homestay guests. The owner invited us to join him and his guests for a meal of snake egg omelet, stir-fried snake, and wine tasting. His collection of snake and reptile wines was awe-inspiring, with jars of exotic concoctions lining the shelves like specimens collected by a mad scientist. While the owner was preparing the meal, his mother showed us where they raised the snakes. Curiously, they kept the snakes inside bonsai pots covered with glass lids and ceramic urns around the house, which was rather disturbing. While I wanted to stay longer to talk with the friendly owners and guests, the familiar aroma of freshly cooked omelet made my stomach churn, and I knew I had to step away.`,
+            `We went on to explore Lệ Mật's picturesque historical sites, but moral questions were swirling in my mind. While learning about their snake farming practices was enlightening, I couldn't shake the feeling that younger generations might view this legacy differently. Although concerns about overexploitation and illegal harvesting have largely been addressed**, the ethical dilemma of valuing a culture built on animal sacrifice still resonates with young people like Trường and me. As Lệ Mật became a city-level tourist attraction***, celebrating its unique snake farming and culinary traditions, the tension between preserving culture and respecting animal welfare became increasingly apparent. In the meantime, the attention is on developing tourism and promoting all-things-snakes as the village's quintessence.`,
+            `As the sun dipped below the horizon, Lệ Mật awakened its urban spirit. Yet, in quiet alleys, hordes of wild animals were confined to cramped, claustrophobic cages, awaiting painful deaths for the amusement of “adventurous” souls. A legacy that felt increasingly unsettling persisted.`,
+            `* https://www.bienphong.com.vn/truyen-thuyet-lang-xa-post16950.html <br>
                 **Aust PW, Van Tri N, Natusch DJD, Alexander GJ. Asian snake farms: conservation curse or sustainable enterprise? Oryx. 2017;51(3):498-505. doi:10.1017/S003060531600034X <br>
                 ***https://nguoihanoi.vn/lang-ran-le-mat-chinh-thuc-tro-thanh-diem-du-lich-cap-thanh-pho-ha-noi-84200.html`
-            }
-        }
+        ]
+
+        const images = [
+            { src: 'images/lemat/29.png', type: 'landscape' },
+            { src: 'images/lemat/7.png', type: 'landscape' },
+            { src: 'images/lemat/17.png', type: 'landscape' },
+            { src: 'images/lemat/27.png', type: 'landscape' },
+            { src: 'images/lemat/2.png', type: 'portrait' },
+            { src: 'images/lemat/13.png', type: 'landscape' },
+            { src: 'images/lemat/3.png', type: 'landscape' },
+            { src: 'images/lemat/5.png', type: 'landscape' },
+            { src: 'images/lemat/8.png', type: 'landscape' },
+            { src: 'images/lemat/9.png', type: 'landscape' },
+            { src: 'images/lemat/10.png', type: 'landscape' },
+            { src: 'images/lemat/11.png', type: 'landscape' },
+            { src: 'images/lemat/12.png', type: 'landscape' },
+            { src: 'images/lemat/18.png', type: 'landscape' },
+            { src: 'images/lemat/19.png', type: 'landscape' },
+            { src: 'images/lemat/20.png', type: 'landscape' },
+            { src: 'images/lemat/8.png', type: 'landscape' },
+            { src: 'images/lemat/21.png', type: 'portrait' },
+            { src: 'images/lemat/22.png', type: 'landscape' },
+            { src: 'images/lemat/25.png', type: 'landscape' },
+            { src: 'images/lemat/28.png', type: 'landscape' },
+            { src: 'images/lemat/26.png', type: 'landscape' },
+            { src: 'images/lemat/1.png', type: 'portrait' },
+        ]; // Add more image paths as needed
+
     </script>
     <script src="javascripts/trace.js"></script>
     <script src="javascripts/index.js">
