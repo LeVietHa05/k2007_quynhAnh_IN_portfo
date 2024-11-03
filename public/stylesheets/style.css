@@ -366,7 +366,7 @@ footer {
 
 .gallery-container {
   position: relative;
-  width: 70%;
+  width: 50%;
 }
 
 .main-img-container {
@@ -431,7 +431,7 @@ footer {
 .text-content {
   overflow-y: auto;
   height: 100%;
-  width: 30%;
+  width: 50%;
 }
 .preview {
   width: 100px;
@@ -459,7 +459,7 @@ footer {
 }
 .img-con {
   position: relative;
-  height: 800px;
+  height: 850px;
 }
 @media screen and (max-width: 1368px) {
   .main-content {

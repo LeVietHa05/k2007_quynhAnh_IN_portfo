@@ -44,6 +44,7 @@ for (let text of blocks) {
     let block = document.createElement("div");
     block.className = "block";
     let content = document.createElement("p");
+    content.style.margin = `12px 0`
     content.innerHTML = text;
     block.appendChild(content);
     document.querySelector(".text-content").appendChild(block);
