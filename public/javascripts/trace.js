@@ -1,5 +1,5 @@
 let currentIndex = 1;
-
+showImage(1)
 function showImage(index) {
     currentIndex = index;
     let mainImage = document.getElementById("main-image");
